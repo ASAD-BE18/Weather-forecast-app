@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ASAD-BE18/weather-forecast-app/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/ASAD-BE18/weather-forecast-app/static/js/main.2a6d4529.chunk.js",
+    "main.js.map": "/ASAD-BE18/weather-forecast-app/static/js/main.2a6d4529.chunk.js.map",
+    "runtime-main.js": "/ASAD-BE18/weather-forecast-app/static/js/runtime-main.82796ebf.js",
+    "runtime-main.js.map": "/ASAD-BE18/weather-forecast-app/static/js/runtime-main.82796ebf.js.map",
+    "static/js/2.633089ce.chunk.js": "/ASAD-BE18/weather-forecast-app/static/js/2.633089ce.chunk.js",
+    "static/js/2.633089ce.chunk.js.map": "/ASAD-BE18/weather-forecast-app/static/js/2.633089ce.chunk.js.map",
+    "static/js/3.b2a26f8f.chunk.js": "/ASAD-BE18/weather-forecast-app/static/js/3.b2a26f8f.chunk.js",
+    "static/js/3.b2a26f8f.chunk.js.map": "/ASAD-BE18/weather-forecast-app/static/js/3.b2a26f8f.chunk.js.map",
+    "index.html": "/ASAD-BE18/weather-forecast-app/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/ASAD-BE18/weather-forecast-app/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.633089ce.chunk.js.LICENSE.txt": "/ASAD-BE18/weather-forecast-app/static/js/2.633089ce.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/ASAD-BE18/weather-forecast-app/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.82796ebf.js",
+    "static/js/2.633089ce.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.2a6d4529.chunk.js"
+  ]
+}
