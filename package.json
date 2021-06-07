@@ -1,6 +1,6 @@
 {
   "homepage": "https://github.com/ASAD-BE18/weather-forecast-app",
-  "name": "weather-forecast-app",
+  "name": "weather_forecast_app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
