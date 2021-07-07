@@ -1,15 +1,15 @@
-import { useState, useEffect } from 'react';
-import 'font-awesome/css/font-awesome.min.css';
+import { useState, useEffect } from "react";
+import "font-awesome/css/font-awesome.min.css";
 
-import countries from 'i18n-iso-countries';
+import countries from "i18n-iso-countries";
 
-countries.registerLocale(require('i18n-iso-countries/langs/en.json'));
+countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
 
 function Home() {
   // State
   const [apiData, setApiData] = useState({});
-  const [getState, setGetState] = useState('Sukkur');
-  const [state, setState] = useState('Sukkur');
+  const [getState, setGetState] = useState("Sukkur");
+  const [state, setState] = useState("Sukkur");
 
   const apiUrl = `http://localhost:3001/getForecast?city=${state}`;
 
@@ -58,13 +58,13 @@ function Home() {
           </button>
         </div>
 
-        <div className="card mt-3 mx-auto" style={{ width: '300px' }}>
+        <div className="card mt-3 mx-auto" style={{ width: "300px" }}>
           {apiData.main ? (
             <div className="card-body text-center">
               <img
                 src={`http://openweathermap.org/img/wn/${apiData.weather[0].icon}@4x.png`}
                 alt="weather status icon"
-                style={{"width": "100px"}}
+                style={{ width: "100px" }}
               />
 
               <p className="h2 text-center">
@@ -75,37 +75,34 @@ function Home() {
                 <i className="fas fa-map-marker-alt"></i>
                 <strong>{apiData.name}</strong>
               </p>
-                  <p className="text-center">
-                    <strong>
-                      Min. Temperature: {' '} 
-                      {kelvinToFarenheit(apiData.main.temp_min)}&deg; C
-                    </strong>
-                  </p>
-                  <p>
-                    <strong>
-                      Max. Temperature: {' '}
-                      {kelvinToFarenheit(apiData.main.temp_max)}&deg; C
-                    </strong>
-                  </p>
-                  <p>
-                    <strong>
-                      Humidity: {' '}
-                      {apiData.main.humidity}%
-                    </strong>
-                  </p>
-                
-                  <p>
-                    <strong>{apiData.weather[0].main}</strong>
-                  </p>
-                  <p className='h5'>
-                    <strong>
-                      {countries.getName(apiData.sys.country, 'en', {
-                        select: 'official',
-                      })}
-                    </strong>
-                  </p>
-                </div>
-              ) : (
+              <p className="text-center">
+                <strong>
+                  Min. Temperature: {kelvinToFarenheit(apiData.main.temp_min)}
+                  &deg; C
+                </strong>
+              </p>
+              <p>
+                <strong>
+                  Max. Temperature: {kelvinToFarenheit(apiData.main.temp_max)}
+                  &deg; C
+                </strong>
+              </p>
+              <p>
+                <strong>Humidity: {apiData.main.humidity}%</strong>
+              </p>
+
+              <p>
+                <strong>{apiData.weather[0].main}</strong>
+              </p>
+              <p className="h5">
+                <strong>
+                  {countries.getName(apiData.sys.country, "en", {
+                    select: "official",
+                  })}
+                </strong>
+              </p>
+            </div>
+          ) : (
             <h1>Loading</h1>
           )}
         </div>
