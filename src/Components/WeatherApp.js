@@ -1,16 +1,17 @@
 import { Navbar, Nav, Button } from "react-bootstrap";
 import { BrowserRouter as Router, Link, Switch, Redirect ,Route } from "react-router-dom";
-import { useState } from "react";
 import Home from "./Home";
 import SignUp from "./RegistrationForm";
 import About from "./About";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faLaptopCode} from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function WeatherApp(props) {
   return (
     <Router>
       <Navbar bg="dark" className="p-2" variant="dark">
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+        <Navbar.Brand><FontAwesomeIcon icon={faLaptopCode} /></Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link as={Link} to="/home">
             Home
@@ -26,7 +27,7 @@ export default function WeatherApp(props) {
         </Nav>
       </Navbar>
       <Switch>
-        <Redirect from="/react-weather-app" to='/' />
+        <Redirect from="/weather-forecast-app" to='/home' />
         <Route exact path="/home">
           <Home />
         </Route>

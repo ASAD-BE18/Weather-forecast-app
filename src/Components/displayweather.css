@@ -1,0 +1,26 @@
+.weather-icon {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  color: black;
+}
+
+.weathercard {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  margin: 20px 0;
+  background-color: royalblue;
+  border-radius: 10px;
+  align-self: flex-start;
+}
+
+.parameter {
+  flex-basis: calc(100% / 3);
+  padding: 10px;
+  font: 20px solid black;
+  font-weight: bold;
+}
