@@ -66,10 +66,6 @@ function DisplayWeather(props) {
             {item.dt_txt.slice(8, 10)}-{item.dt_txt.slice(5, 7)}-
             {new Date().toDateString().slice(11, 15)}
           </li>
-          <li class="list-group-item list-group-item-success">
-            {item.dt_txt.slice(8, 10)}-{item.dt_txt.slice(5, 7)}-
-            {new Date().toDateString().slice(11, 15)}
-          </li>
         </ul>
       </div>
     );
