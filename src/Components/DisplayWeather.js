@@ -48,21 +48,21 @@ function DisplayWeather(props) {
 
   const forecasts = forecast.map((item) => {
     return (
-      <div className="col-md-3 mt-3">
-        <ul class="list-group" key={item.dt}>
-          <li class="list-group-item list-group-item-danger">
+      <div className="col-md-3 mt-3" key={item.dt}>
+        <ul className="list-group" >
+          <li className="list-group-item list-group-item-danger">
             {item.main.temp}&#176;C
           </li>
-          <li class="list-group-item list-group-item-primary">
+          <li className="list-group-item list-group-item-primary">
             <img
               alt="icon"
               src={`https://openweathermap.org/img/w/${item.weather[0].icon}.png`}
             />
           </li>
-          <li class="list-group-item list-group-item-danger">
+          <li className="list-group-item list-group-item-danger">
             Time: {item.dt_txt.slice(11, 13) * 1}:00
           </li>
-          <li class="list-group-item list-group-item-success">
+          <li className="list-group-item list-group-item-success">
             {item.dt_txt.slice(8, 10)}-{item.dt_txt.slice(5, 7)}-
             {new Date().toDateString().slice(11, 15)}
           </li>
@@ -79,8 +79,8 @@ function DisplayWeather(props) {
         <div className="display-5"> {date} </div>
       </div>
 
-      <div class="container d-flex h-200"></div>
-      <div class="row offset-4">
+      <div className="container d-flex h-200"></div>
+      <div className="row offset-4">
         <div className="col-md-3 offset- justify-content-center align-self-center">
           <div className="weather-icon">{weatherIcon}</div>
         </div>

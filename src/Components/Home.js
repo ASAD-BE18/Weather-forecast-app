@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import "font-awesome/css/font-awesome.min.css";
-import DisplayWeather from './DisplayWeather';
-
-
+import DisplayWeather from "./DisplayWeather";
 
 function Home() {
   // State
@@ -16,8 +14,14 @@ function Home() {
   useEffect(() => {
     fetch(apiUrl)
       .then((res) => res.json())
-      .then((data) => setApiData(data));
-      debugger;
+      .then((data) => {
+        if (data.hasOwnProperty("msg")) {
+          alert(data.msg);
+          return;
+        }
+
+        return setApiData(data);
+      });
   }, [apiUrl]);
 
   const inputHandler = (event) => {
@@ -27,7 +31,6 @@ function Home() {
   const submitHandler = () => {
     setState(getState);
   };
-
 
   return (
     <div className="App">
@@ -54,14 +57,13 @@ function Home() {
             Search
           </button>
         </div>
-        </div>
-        {apiData !== undefined ? (
+      </div>
+      {apiData !== undefined ? (
         <div>
           <DisplayWeather data={apiData} />
         </div>
       ) : null}
-        </div>
-        
+    </div>
   );
 }
 
