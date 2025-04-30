@@ -6959,8 +6959,8 @@
             ((8 & Qu.flags) !== 0
               ? et(Qu, ui) && (ii = !0)
               : Qu.tag === 13 && xu(e, Qu) && et(Qu, ui) && (ii = !0))
-          let t = Qu.flags
-          (256 & t) !== 0 && pu(e, Qu),
+          let t = Qu.flags;
+          (256 & t) !== 0 && pu(e, Qu);
           (512 & t) === 0 ||
               Xu ||
               ((Xu = !0),
