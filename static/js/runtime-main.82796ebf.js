@@ -128,7 +128,7 @@
   (u.o = function (e, r) {
     return Object.prototype.hasOwnProperty.call(e, r)
   }),
-  (u.p = '/ASAD-BE18/weather-forecast-app/'),
+  (u.p = '/Weather-forecast-app/'),
   (u.oe = function (e) {
     throw (console.error(e), e)
   })
